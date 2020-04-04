@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 39 DOM JS</title>
+</head>
+<body>
+    <button type="button" onclick="jalan()" name="button">jalan</button>
+    <br>
+    <br>
+    <hr>
+    <b>Active Element</b> Property : <br>
+    <p id="idSatu">contoh</p>
+    <hr>
+    <b>addElementListener()</b> Property : <br>
+    <p id="idDua">contoh</p>
+    <hr>
+    <b>Anchor</b> Property (<a name="jeruk" href="#">Jeruk</a>
+    <a name="semangka" href="#">Semangka</a>) : <br>
+    <p id="idTiga">contoh</p>
+    <hr>
+
+    <script>
+        function jalan(){
+            var ae = document.activeElement.tagName;
+            document.getElementById("idSatu").innerHTML = ae;
+
+            document.addEventListener("click", function(){
+                document.getElementById("idDua").innerHTML = "Sukses ! Merubah addEventListener()"
+            });
+
+            var ap = document.anchors.length;
+            document.getElementById("idTiga").innerHTML = ap;
+        }
+    </script>
+</body>
+</html>
